@@ -1,4 +1,4 @@
-img_num, x, y, label, img_source
+img_num,x,y,label,img_source
 0,37.5,98.5,1,saa_img1.png
 1,89.5,96.5,0,saa_img1.png
 2,85.5,95.5,0,saa_img1.png
