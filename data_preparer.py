@@ -151,7 +151,7 @@ class DataPreparer():
         else:
             # create a file with headings
             file = open(file_name, "a+")
-            file.write("img_num, x, y, label, img_source\n")
+            file.write("img_num,x,y,label,img_source\n")
             start_num = 0
 
         for i in range(0, len(data)):
@@ -211,7 +211,7 @@ class DataPreparer():
 if __name__ == '__main__':
     saa_name = 'saa_img1.png'
     data_preparer = DataPreparer(saa_image_name = saa_name)
-    #data_preparer.run(plot_data = True, set_labels=True)
+    data_preparer.run(plot_data = True, set_labels=True)
     #data_preparer.run(plot_data = True, set_labels=False)
-    data_preparer.run(save_data=True)
+    #data_preparer.run(save_data=True)
     #data_preparer.run()
