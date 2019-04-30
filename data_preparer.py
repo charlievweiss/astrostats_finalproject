@@ -97,7 +97,7 @@ class DataPreparer():
         # image, x, y
         return img_small, col_mid, row_mid
 
-    def plot_bright_spots(self, data, labels, set_labels=False):
+    def plot_bright_spots(self, data, labels, set_labels=False, coordinates=False):
         fig = plt.figure()
 
         columns = int(np.sqrt(len(data)))
@@ -119,9 +119,11 @@ class DataPreparer():
 
             ax = fig.add_subplot(rows, columns,i+1)
             if set_labels:
-                ax.set_title("{}: {}".format(i, label))
+                ax.set_title("{}: {}".format(i, label), color = 'r')
+            elif coordinates:
+                ax.set_title('{}: {},{}'.format(i,x,y), color = 'r')
             else:
-                ax.set_title('{}: {},{}'.format(i,x,y))
+                ax.set_title('{}'.format(i), color = 'r')
             
             ax.imshow(img_new)
 
@@ -172,14 +174,15 @@ class DataPreparer():
 
     def run(self, plot_data=False, save_data=False, set_labels=False):
         # SETUP
-        batch = 5
+        batch = 14
+        row = 2
         labels_file_name = "processed_images/labels/labels_{}.txt".format(batch)
         labels = pd.read_csv(labels_file_name, delimiter=",", engine='python')
 
         # get smaller part of saa_image for processing
         img_size = 100
-        self.start_x = 0 + img_size*batch
-        self.start_y = 0 #+ img_size*batch
+        self.start_x = 0 + img_size*(batch-(row*6))
+        self.start_y = row + img_size
 
         sample_image = self.split_image(start_x = self.start_x, start_y = self.start_y, img_size = img_size)
         # detect bright spots
@@ -205,13 +208,15 @@ class DataPreparer():
         if save_data:
             path = "processed_images/"
             name = "data.txt"
-            self.save_data(path,name,data, labels)
+            self.save_data(path, name, data, labels)
 
 
 if __name__ == '__main__':
     saa_name = 'saa_img1.png'
     data_preparer = DataPreparer(saa_image_name = saa_name)
-    data_preparer.run(plot_data = True, set_labels=True)
-    #data_preparer.run(plot_data = True, set_labels=False)
-    #data_preparer.run(save_data=True)
+
+    data_preparer.run(plot_data = True, set_labels=False)
+    # data_preparer.run(plot_data = True, set_labels=True)
+    # data_preparer.run(save_data=True)
+
     #data_preparer.run()
