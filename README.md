@@ -12,3 +12,5 @@ Mahabal, A., et. al.(2019). Machine Learning for the Zwicky Transient Facility. 
 Nagano, M., & Watson, A. A. (2000). Observations and implications of the ultrahigh-enegy 		cosmic rays. Reviews of Modern Physics,72(689). Retrieved April 14, 2019, from 			https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.72.689.
 
 Strong, A. W., Moskalenko, I. V., & Ptuskin, V. S. (2007). Cosmic-ray propagation and 			interactions in the Galaxy. ArXiv,1. Retrieved April 14, 2019, from 					https://ui.adsabs.harvard.edu/abs/2007ARNPS..57..285S/abstract.
+
+git test
