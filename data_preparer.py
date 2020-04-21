@@ -257,9 +257,9 @@ if __name__ == '__main__':
     ## Create new images and classify
     path = "processed_images"
     filename = "data.txt"
-    data_preparer.create_and_classify_images(path, filename)
+    # data_preparer.create_and_classify_images(path, filename, save_data = False)
 
     ## Load previous images to review
     start_img_num = 0
-    end_img_num = 10
-    # data_preparer.review_data(path, filename, start_img_num, end_img_num, old_naming=True)
+    end_img_num = 11
+    data_preparer.review_data(path, filename, start_img_num, end_img_num, old_naming=True)
