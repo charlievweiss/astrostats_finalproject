@@ -1,15 +1,6 @@
-TODOS:
-- Write overview
-- link to sources from paragraphs
-- Write code overview
-
 # Cosmic Ray Detection
 
 ## Table of Contents
-- [Overview](#overview)
-- [Code](#code)
-    * [Preparing Data](#preparer)
-    * [Analyzing Data](#analysis)
 - [Conclusions (Man or machine?)](#conclusions)
     * [Context](#context)
     * [K-means Algorithm Overview](#k-means-overview)
@@ -18,19 +9,6 @@ TODOS:
     * [Would edge detection work?](#edge-detection)
 - [Poster](#poster)
 - [References](#references)
-
-<a name="overview"></a>
-# Overview
-TODO: Write this
-
-<a name="code"></a>
-# Code
-
-<a name="preparer"></a>
-## Preparing Data
-
-<a name="analysis"></a>
-## Analyzing Data
 
 <a name="conclusions"></a>
 # Man or Machine? Which detects cosmic rays with more accuracy?
